@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881A20FD19CC787A0000F2FD /* MBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A20FC19CC787A0000F2FD /* MBNavigationController.swift */; };
+		881A20FF19CC8F9B0000F2FD /* MBNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A20FE19CC8F9B0000F2FD /* MBNavTitleView.swift */; };
+		881A210119CC903D0000F2FD /* MBNavTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 881A210019CC903D0000F2FD /* MBNavTitleView.xib */; };
+		881A210319CCA72F0000F2FD /* MBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A210219CCA72E0000F2FD /* MBExtensions.swift */; };
+		881A210519CCB80D0000F2FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A210419CCB80D0000F2FD /* Constants.swift */; };
 		88304FCB19CB298F00D6CD19 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 88304FCA19CB298F00D6CD19 /* skull.png */; };
 		88304FD019CB33FA00D6CD19 /* BookmarkedPlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88304FCE19CB33FA00D6CD19 /* BookmarkedPlaceDetail.swift */; };
 		88304FD119CB33FA00D6CD19 /* BookmarkedPlaceDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88304FCF19CB33FA00D6CD19 /* BookmarkedPlaceDetail.xib */; };
@@ -68,6 +73,7 @@
 		8840556F19C8957B00F0D3EF /* want_it_cell_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8840553C19C8957B00F0D3EF /* want_it_cell_home.png */; };
 		8840557019C8957B00F0D3EF /* want_it_cell_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8840553D19C8957B00F0D3EF /* want_it_cell_home@2x.png */; };
 		8840557119C8957B00F0D3EF /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 8840553E19C8957B00F0D3EF /* welcome.png */; };
+		884DA4EC19CC71F500DAADA0 /* tagsList.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 884DA4EB19CC71F500DAADA0 /* tagsList.jpg */; };
 		88568AEA19C7A2AE006AD591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88568AE919C7A2AE006AD591 /* AppDelegate.swift */; };
 		88568AF119C7A2AE006AD591 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88568AF019C7A2AE006AD591 /* Images.xcassets */; };
 		88568AF419C7A2AE006AD591 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88568AF219C7A2AE006AD591 /* LaunchScreen.xib */; };
@@ -103,6 +109,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881A20FC19CC787A0000F2FD /* MBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBNavigationController.swift; path = ViewControllers/Base/MBNavigationController.swift; sourceTree = "<group>"; };
+		881A20FE19CC8F9B0000F2FD /* MBNavTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBNavTitleView.swift; path = Views/Navigation/MBNavTitleView.swift; sourceTree = "<group>"; };
+		881A210019CC903D0000F2FD /* MBNavTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBNavTitleView.xib; sourceTree = "<group>"; };
+		881A210219CCA72E0000F2FD /* MBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBExtensions.swift; sourceTree = "<group>"; };
+		881A210419CCB80D0000F2FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88304FCA19CB298F00D6CD19 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skull.png; path = Resources/Images/Icons/skull.png; sourceTree = "<group>"; };
 		88304FCE19CB33FA00D6CD19 /* BookmarkedPlaceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkedPlaceDetail.swift; path = ViewControllers/MyBookmarksVCs/BookmarkedPlaceDetail.swift; sourceTree = "<group>"; };
 		88304FCF19CB33FA00D6CD19 /* BookmarkedPlaceDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookmarkedPlaceDetail.xib; path = ViewControllers/MyBookmarksVCs/BookmarkedPlaceDetail.xib; sourceTree = "<group>"; };
@@ -164,6 +175,7 @@
 		8840553C19C8957B00F0D3EF /* want_it_cell_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = want_it_cell_home.png; path = Resources/Images/MyBookmarks/want_it_cell_home.png; sourceTree = "<group>"; };
 		8840553D19C8957B00F0D3EF /* want_it_cell_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "want_it_cell_home@2x.png"; path = "Resources/Images/MyBookmarks/want_it_cell_home@2x.png"; sourceTree = "<group>"; };
 		8840553E19C8957B00F0D3EF /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = Resources/Images/MyBookmarks/welcome.png; sourceTree = "<group>"; };
+		884DA4EB19CC71F500DAADA0 /* tagsList.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tagsList.jpg; path = Resources/Images/MyTags/tagsList.jpg; sourceTree = "<group>"; };
 		88568AE419C7A2AE006AD591 /* Matchbook3_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchbook3_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88568AE819C7A2AE006AD591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88568AE919C7A2AE006AD591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +269,7 @@
 		88304FD819CB415400D6CD19 /* Renderings */ = {
 			isa = PBXGroup;
 			children = (
+				884DA4EB19CC71F500DAADA0 /* tagsList.jpg */,
 				88304FD919CB417800D6CD19 /* bookmarksList1.png */,
 			);
 			name = Renderings;
@@ -277,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				88304FE319CB7B9800D6CD19 /* NavBarButton.swift */,
+				881A20FE19CC8F9B0000F2FD /* MBNavTitleView.swift */,
+				881A210019CC903D0000F2FD /* MBNavTitleView.xib */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -286,6 +301,7 @@
 			children = (
 				889364C519C8E9CB00DAF31D /* MBViewController.swift */,
 				88CC4FA919CBA4450039D66F /* MBTabBarController.swift */,
+				881A20FC19CC787A0000F2FD /* MBNavigationController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -381,6 +397,8 @@
 			isa = PBXGroup;
 			children = (
 				88568AE919C7A2AE006AD591 /* AppDelegate.swift */,
+				881A210219CCA72E0000F2FD /* MBExtensions.swift */,
+				881A210419CCB80D0000F2FD /* Constants.swift */,
 				889364C019C8E66E00DAF31D /* Views */,
 				88568B0F19C7A374006AD591 /* ViewControllers */,
 				88568B1019C7A4A2006AD591 /* Resources */,
@@ -573,6 +591,7 @@
 				88304FCB19CB298F00D6CD19 /* skull.png in Resources */,
 				8840556B19C8957B00F0D3EF /* signupBannerBG.png in Resources */,
 				8840554D19C8957B00F0D3EF /* grayVerticalDivider.png in Resources */,
+				881A210119CC903D0000F2FD /* MBNavTitleView.xib in Resources */,
 				8840555319C8957B00F0D3EF /* headerPhotoLove.png in Resources */,
 				8840554219C8957B00F0D3EF /* arrow_down_home@2x.png in Resources */,
 				8840555F19C8957B00F0D3EF /* myTags.png in Resources */,
@@ -616,6 +635,7 @@
 				88BC808219C7C5AB00904ED9 /* MyTagsViewController.xib in Resources */,
 				8840556319C8957B00F0D3EF /* popupClose.png in Resources */,
 				8840556819C8957B00F0D3EF /* ratePopupTealButton@2x.png in Resources */,
+				884DA4EC19CC71F500DAADA0 /* tagsList.jpg in Resources */,
 				8840556D19C8957B00F0D3EF /* toolTip+.png in Resources */,
 				8840554E19C8957B00F0D3EF /* grayVerticalDivider@2x.png in Resources */,
 				8840554519C8957B00F0D3EF /* bookmarkTearCurl.png in Resources */,
@@ -638,15 +658,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881A20FF19CC8F9B0000F2FD /* MBNavTitleView.swift in Sources */,
 				88BC809119C7CCE200904ED9 /* ProfileViewController.swift in Sources */,
 				88BC808D19C7CAA500904ED9 /* NewBookmarkSearchViewController.swift in Sources */,
 				889364C319C8E6A100DAF31D /* MBView.swift in Sources */,
 				88BC808119C7C5AB00904ED9 /* MyTagsViewController.swift in Sources */,
 				88304FD019CB33FA00D6CD19 /* BookmarkedPlaceDetail.swift in Sources */,
 				88568B0D19C7A365006AD591 /* MyBookmarksViewController.swift in Sources */,
+				881A210519CCB80D0000F2FD /* Constants.swift in Sources */,
 				88BC808519C7C6E300904ED9 /* FeedViewController.swift in Sources */,
 				88304FE419CB7B9800D6CD19 /* NavBarButton.swift in Sources */,
 				88CC4FAC19CBA7E30039D66F /* FilterMenu.swift in Sources */,
+				881A210319CCA72F0000F2FD /* MBExtensions.swift in Sources */,
+				881A20FD19CC787A0000F2FD /* MBNavigationController.swift in Sources */,
 				88304FD619CB372C00D6CD19 /* BookmarkCell.swift in Sources */,
 				88CC4FAA19CBA4450039D66F /* MBTabBarController.swift in Sources */,
 				88304FDD19CB612800D6CD19 /* MyBookmarksToolbar.swift in Sources */,

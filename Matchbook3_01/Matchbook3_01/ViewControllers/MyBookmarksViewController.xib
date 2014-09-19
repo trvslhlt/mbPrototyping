@@ -6,10 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyBookmarksViewController" customModule="Matchbook3_01">
             <connections>
-                <outlet property="filterBarHeight" destination="j2I-yt-X3u" id="Zkb-6v-YeJ"/>
                 <outlet property="headerImageView" destination="MPB-pu-eWQ" id="x3u-5S-Ivs"/>
                 <outlet property="myBookmarksToolbar" destination="RyN-FA-dll" id="7Mm-lb-ilx"/>
                 <outlet property="scrollView" destination="jSk-fo-rtR" id="zPX-8k-3za"/>
+                <outlet property="sortBarHeight" destination="j2I-yt-X3u" id="yuf-ye-NHG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

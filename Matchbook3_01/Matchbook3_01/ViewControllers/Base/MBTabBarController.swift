@@ -13,18 +13,17 @@ class MBTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-      
-      
       let myBookmarksVC = MyBookmarksViewController(nibName: "MyBookmarksViewController", bundle: nil)
-      let myBookmarksNavController = UINavigationController(rootViewController: myBookmarksVC)
-      myBookmarksNavController.navigationBar.translucent = false
+      let myBookmarksNavController = MBNavigationController(rootViewController: myBookmarksVC)
+      
       let myTagsVC = MyTagsViewController(nibName: "MyTagsViewController", bundle: nil)
+      let myTagsNavController = MBNavigationController(rootViewController: myTagsVC)
+      
       let feedVC = FeedViewController(nibName: "FeedViewController", bundle: nil)
       let newBookmarkSearchVC = NewBookmarkSearchViewController(nibName: "NewBookmarkSearchViewController", bundle: nil)
       let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
       
-      let controllers = [myBookmarksNavController, myTagsVC, newBookmarkSearchVC, feedVC, profileVC]
+      let controllers = [myBookmarksNavController, myTagsNavController, newBookmarkSearchVC, feedVC, profileVC]
       self.viewControllers = controllers
       
       let imgTitle = "skull.png"
@@ -49,10 +48,11 @@ class MBTabBarController: UITabBarController {
       
       var buttonStaindin = UIImageView(image: UIImage(named: "addBookmark.png"))
       buttonStaindin.setTranslatesAutoresizingMaskIntoConstraints(false)
+      buttonStaindin.contentMode = UIViewContentMode.ScaleAspectFit
       self.view.addSubview(buttonStaindin)
 
       var xConstraint = NSLayoutConstraint(item: buttonStaindin, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0.0)
-      var yConstraint = NSLayoutConstraint(item: buttonStaindin, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: -15.0)
+      var yConstraint = NSLayoutConstraint(item: buttonStaindin, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: -10.0)
 //      var wConstraint = NSLayoutConstraint(item: buttonStaindin, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 200)
 //      var hConstraint = NSLayoutConstraint(item: buttonStaindin, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 200)
       

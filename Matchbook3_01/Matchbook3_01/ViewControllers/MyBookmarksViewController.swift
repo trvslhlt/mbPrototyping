@@ -13,7 +13,13 @@ import UIKit
 
 
 
-class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookmarksToolbarProtocol {
+class MyBookmarksViewController:
+  MBViewController,
+  UIScrollViewDelegate,
+  MyBookmarksToolbarProtocol,
+  MBNavTitleViewProtocol
+  
+{
   
   
   
@@ -21,6 +27,8 @@ class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookm
   
   let bookmarkCellReuseID = "BookmarkCellReuseID"
   
+  //IBOutlets
+  @IBOutlet weak var sortBarHeight: NSLayoutConstraint!
   @IBOutlet weak var headerImageView: UIImageView!
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var myBookmarksToolbar: MyBookmarksToolbar!
@@ -29,52 +37,64 @@ class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookm
     super.awakeFromNib()
   }
   
-  //IBOutlets
-  @IBOutlet weak var filterBarHeight: NSLayoutConstraint!
-  
-  var showFilterChoices: Bool? {
+  var showSortChoices: Bool? {
     
     didSet{
       struct Static {
         static var token : dispatch_once_t = 0
-        static var filterBarExpandedHeight: CGFloat?
+        static var sortBarExpandedHeight: CGFloat?
       }
       
       dispatch_once(&Static.token, {
-        Static.filterBarExpandedHeight = self.filterBarHeight.constant
+        Static.sortBarExpandedHeight = self.sortBarHeight.constant
       })
 
-      if ((self.showFilterChoices?) != nil) {
-        if (self.showFilterChoices!){
-          self.filterBarHeight.constant = Static.filterBarExpandedHeight!
+      if ((self.showSortChoices?) != nil) {
+        if (self.showSortChoices!){
+          self.sortBarHeight.constant = Static.sortBarExpandedHeight!
         } else {
-          self.filterBarHeight.constant = 0
+          self.sortBarHeight.constant = 0
         }
       }
     }
   }
   
+//  var showFilterChoices: Bool? {
+//    
+//    didSet{
+//      struct Static {
+//        static var token : dispatch_once_t = 0
+//        static var filterBarExpandedHeight: CGFloat?
+//      }
+//      
+//      dispatch_once(&Static.token, {
+//        Static.filterBarExpandedHeight = self.filterBarHeight.constant
+//      })
+//      
+//      if ((self.showFilterChoices?) != nil) {
+//        if (self.showFilterChoices!){
+//          self.BarHeight.constant = Static.sortBarExpandedHeight!
+//        } else {
+//          self.sortBarHeight.constant = 0
+//        }
+//      }
+//    }
+//  }
+
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.showFilterChoices = false
-    self.filterBarHeight.constant = 0
+    self.showSortChoices = false
+    self.sortBarHeight.constant = 0
     
-    self.title = "My Bookmarks"
     self.myBookmarksToolbar.delegate = self
+    self.mbNavigationController?.auxNavView?.delegate = self
+    self.title = "TTTTTT"
     
     addGestureRecognizers()
     setRightBarButton(iconName: "skull.png", paddingToEdge: 0.0)
     setLeftBarButton(iconName: "skull.png", paddingToEdge: 0.0)
-    
-//    for item in self.tabBar.items as [UITabBarItem] {
-    
-//      if let image = item.image {
-//    var image = UIImage(named: "skull.png")
-//      self.tabBarItem.image = image.imageWithColor(UIColor.clearColor()).imageWithRenderingMode(.AlwaysOriginal)
-//    //}
-//      }
-//    }
 
   }
   
@@ -115,11 +135,27 @@ class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookm
 
   // MARK: MyBookmarksToolbarProtocol
   func sortTapped(){
-    if ((self.showFilterChoices?) != nil){
-      self.showFilterChoices = !self.showFilterChoices!
+    if ((self.showSortChoices?) != nil){
+      self.showSortChoices = !self.showSortChoices!
     }
   }
   
+  func filterTapped(){
+   // self.showFilterChoices = !self.showFilterChoices!
+  }
+  
+  func mapTapped(){
+    
+  }
+  
+  func searchTapped() {
+    
+  }
+  
+  // MARK: MBNavTitleViewProtocol
+  func navAuxButtonTapped(){
+    
+  }
 }
 
 

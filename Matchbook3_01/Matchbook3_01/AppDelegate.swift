@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.magentaColor()], forState:.Normal)
       UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
       
-      UINavigationBar.appearance().barTintColor = UIColor.darkGrayColor()
+      
+      UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+
 
       window?.rootViewController = tabBarController
 

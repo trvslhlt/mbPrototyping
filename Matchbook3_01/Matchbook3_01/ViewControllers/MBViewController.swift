@@ -10,7 +10,7 @@ import UIKit
 
 class MBViewController: UIViewController {
   
-  
+  var mbNavigationController: MBNavigationController?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -28,6 +28,9 @@ class MBViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    mbNavigationController = self.navigationController as? MBNavigationController
+    
     setup()
     // Do any additional setup after loading the view.
   }

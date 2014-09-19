@@ -21,10 +21,14 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.85882359740000003" green="0.84313732389999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="C81-iB-7UA" secondAttribute="centerX" id="JwV-NJ-OgF"/>
                         <constraint firstAttribute="centerY" secondItem="C81-iB-7UA" secondAttribute="centerY" id="wCO-z3-PD3"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ziT-yt-yJq" appends="YES" id="iSM-75-WP9"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O6-4b-e35">
                     <rect key="frame" x="300" y="0.0" width="150" height="103"/>
@@ -57,10 +61,14 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.85882359740000003" green="0.84313732389999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="cSt-T4-nd3" secondAttribute="centerX" constant="-0.5" id="93T-29-8eE"/>
                         <constraint firstAttribute="centerY" secondItem="cSt-T4-nd3" secondAttribute="centerY" id="us5-Vn-Jdn"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="cts-D7-cSJ" appends="YES" id="umq-jO-JKi"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-eB-gHA">
                     <rect key="frame" x="0.0" y="0.0" width="150" height="103"/>
@@ -73,10 +81,14 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.85882359740000003" green="0.84313732389999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="centerY" secondItem="YAW-T8-aCM" secondAttribute="centerY" id="YJM-7S-Wsf"/>
                         <constraint firstAttribute="centerX" secondItem="YAW-T8-aCM" secondAttribute="centerX" id="qbL-5n-n5Q"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dnE-xj-US0" appends="YES" id="Prf-iX-aNU"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -104,6 +116,21 @@
         <tapGestureRecognizer id="91i-NW-Tjc">
             <connections>
                 <action selector="sortTapped:" destination="iN0-l3-epB" id="haM-3b-eI2"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="cts-D7-cSJ">
+            <connections>
+                <action selector="mapTapped:" destination="iN0-l3-epB" id="kQf-mB-tEZ"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="dnE-xj-US0">
+            <connections>
+                <action selector="searchTapped:" destination="iN0-l3-epB" id="gEb-WW-jpC"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ziT-yt-yJq">
+            <connections>
+                <action selector="filterTapped:" destination="iN0-l3-epB" id="exM-TS-aw8"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

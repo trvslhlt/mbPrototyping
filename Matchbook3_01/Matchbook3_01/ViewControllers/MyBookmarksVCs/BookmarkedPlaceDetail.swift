@@ -9,15 +9,15 @@
 import UIKit
 
 class BookmarkedPlaceDetail: MBViewController {
-
+  
   override func awakeFromNib() {
     super.awakeFromNib()
   }
   
   override func viewDidLoad() {
-      super.viewDidLoad()
-
-      // Do any additional setup after loading the view.
+    super.viewDidLoad()
+  
+    // Do any additional setup after loading the view.
   }
 
   override func didReceiveMemoryWarning() {
@@ -25,7 +25,7 @@ class BookmarkedPlaceDetail: MBViewController {
       // Dispose of any resources that can be recreated.
   }
   
-
+  
   // MARK: - Navigation
 
 

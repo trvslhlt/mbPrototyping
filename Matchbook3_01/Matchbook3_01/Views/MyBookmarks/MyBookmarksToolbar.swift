@@ -10,6 +10,9 @@ import UIKit
 
 protocol MyBookmarksToolbarProtocol {
   func sortTapped()
+  func mapTapped()
+  func searchTapped()
+  func filterTapped()
 }
 
 class MyBookmarksToolbar: UIView {
@@ -32,5 +35,24 @@ class MyBookmarksToolbar: UIView {
   @IBAction func sortTapped(sender: AnyObject) {
     self.delegate?.sortTapped()
   }
+  
+  @IBAction func mapTapped(sender: AnyObject) {
+    self.delegate?.mapTapped()
+  }
+  
+  @IBAction func searchTapped(sender: AnyObject) {
+    self.delegate?.searchTapped()
+  }
+  
+  @IBAction func filterTapped(sender: AnyObject) {
+    self.delegate?.filterTapped()
+  }
 
 }
+
+
+
+
+
+
+

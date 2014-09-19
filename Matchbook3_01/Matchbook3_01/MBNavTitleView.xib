@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MBNavTitleView" customModule="Matchbook3_01" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="98"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7A-Lj-wOE">
+                    <rect key="frame" x="0.0" y="82" width="340" height="16"/>
+                    <color key="backgroundColor" red="0.082352943720000002" green="0.68235296010000002" blue="0.7019608021" alpha="1" colorSpace="deviceRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="SKe-qk-fVb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="y7A-Lj-wOE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="36M-OM-FEV"/>
+                <constraint firstAttribute="bottom" secondItem="y7A-Lj-wOE" secondAttribute="bottom" id="94m-GQ-40b"/>
+                <constraint firstAttribute="trailing" secondItem="y7A-Lj-wOE" secondAttribute="trailing" id="obg-v4-WsR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Dfq-6l-ng4" appends="YES" id="R49-vm-A4v"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="184"/>
+        </view>
+        <tapGestureRecognizer id="Dfq-6l-ng4">
+            <connections>
+                <action selector="navAuxButtonTapped:" destination="iN0-l3-epB" id="vxW-dB-llF"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
