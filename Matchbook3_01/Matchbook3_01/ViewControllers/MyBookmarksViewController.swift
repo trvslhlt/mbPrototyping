@@ -8,7 +8,16 @@
 
 import UIKit
 
+
+
+
+
+
 class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookmarksToolbarProtocol {
+  
+  
+  
+ 
   
   let bookmarkCellReuseID = "BookmarkCellReuseID"
   
@@ -54,7 +63,19 @@ class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookm
     self.title = "My Bookmarks"
     self.myBookmarksToolbar.delegate = self
     
-    self.addGestureRecognizers()
+    addGestureRecognizers()
+    setRightBarButton(iconName: "skull.png", paddingToEdge: 0.0)
+    setLeftBarButton(iconName: "skull.png", paddingToEdge: 0.0)
+    
+//    for item in self.tabBar.items as [UITabBarItem] {
+    
+//      if let image = item.image {
+//    var image = UIImage(named: "skull.png")
+//      self.tabBarItem.image = image.imageWithColor(UIColor.clearColor()).imageWithRenderingMode(.AlwaysOriginal)
+//    //}
+//      }
+//    }
+
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -82,6 +103,14 @@ class MyBookmarksViewController: MBViewController, UIScrollViewDelegate, MyBookm
   // MARK: IBActions
   func bookmarkCellTapped(recognizer: UITapGestureRecognizer){
     self.navigationController?.pushViewController(BookmarkedPlaceDetail(nibName: "BookmarkedPlaceDetail", bundle: nil), animated: true)
+  }
+  
+  func rightBarButtonAction(recognizer: UITapGestureRecognizer){
+    
+  }
+  
+  func leftBarButtonAction(recognizer: UITapGestureRecognizer){
+    
   }
 
   // MARK: MyBookmarksToolbarProtocol

@@ -14,39 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-      let tabBarController = UITabBarController()
+      
+      let tabBarController = MBTabBarController()
+      
+      UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.magentaColor()], forState:.Normal)
+      UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
       
       UINavigationBar.appearance().barTintColor = UIColor.darkGrayColor()
-      
-      let myBookmarksVC = MyBookmarksViewController(nibName: "MyBookmarksViewController", bundle: nil)
-      let myBookmarksNavController = UINavigationController()
-      myBookmarksNavController.navigationBar.translucent = false
-      myBookmarksNavController.pushViewController(myBookmarksVC, animated: false)
-      let myTagsVC = MyTagsViewController(nibName: "MyTagsViewController", bundle: nil)
-      let feedVC = FeedViewController(nibName: "FeedViewController", bundle: nil)
-      let newBookmarkSearchVC = NewBookmarkSearchViewController(nibName: "NewBookmarkSearchViewController", bundle: nil)
-      let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-      let objcVC = ObjcViewController(nibName: "ObjcViewController", bundle: nil)
-      
-      let controllers = [myBookmarksNavController, myTagsVC, newBookmarkSearchVC, feedVC, objcVC]
-      tabBarController.viewControllers = controllers
+
       window?.rootViewController = tabBarController
-      
-      let imgTitle = "skull.png"
-      let myBookmarksImage = UIImage(named: imgTitle)
-      let myTagsImage = UIImage(named: imgTitle)
-      let feedImage = UIImage(named: imgTitle)
-      let newBookmarkSearchImage = UIImage(named: imgTitle)
-      let profileImage = UIImage(named: imgTitle)
-      let objcImage = UIImage(named: imgTitle)
-      
-      myBookmarksVC.tabBarItem = UITabBarItem(title: "My Bookmarks", image: myBookmarksImage, tag: 1)
-      myTagsVC.tabBarItem = UITabBarItem(title: "My Tags", image: myTagsImage, tag: 2)
-      newBookmarkSearchVC.tabBarItem = UITabBarItem(title: "New Bookmarks", image: newBookmarkSearchImage, tag: 3)
-      feedVC.tabBarItem = UITabBarItem(title: "Feed", image: feedImage, tag: 4)
-      objcVC.tabBarItem = UITabBarItem(title: "ObjC", image: objcImage, tag: 5)
-      //profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Featured, tag: 5)
-      //profileVC.tabBarItem.title = "Profile" //not working
+
 
       return true
   }

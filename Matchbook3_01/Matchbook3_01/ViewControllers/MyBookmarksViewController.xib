@@ -45,7 +45,14 @@
                         <constraint firstAttribute="height" constant="98" id="8bQ-iv-Kwq"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJg-5D-fBV">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-id-aSI" customClass="FilterMenu" customModule="Matchbook3_01" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="138" width="600" height="40"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.88235294119999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="j2I-yt-X3u"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJg-5D-fBV" customClass="MyBookmarksToolbar" customModule="Matchbook3_01" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="98" width="600" height="40"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyN-FA-dll" customClass="MyBookmarksToolbar" customModule="Matchbook3_01" customModuleProvider="target">
@@ -60,13 +67,6 @@
                         <constraint firstAttribute="height" constant="40" id="WOz-TT-fdv"/>
                         <constraint firstAttribute="bottom" secondItem="RyN-FA-dll" secondAttribute="bottom" id="m0g-Wl-UBe"/>
                         <constraint firstItem="RyN-FA-dll" firstAttribute="leading" secondItem="cJg-5D-fBV" secondAttribute="leading" id="zoL-Jo-4Qi"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-id-aSI">
-                    <rect key="frame" x="0.0" y="138" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.90196078430000004" green="0.88235294119999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="j2I-yt-X3u"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76Z-eh-zZB" customClass="MBView" customModule="Matchbook3_01" customModuleProvider="target">

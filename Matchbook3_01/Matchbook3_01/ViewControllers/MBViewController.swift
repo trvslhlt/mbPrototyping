@@ -18,8 +18,7 @@ class MBViewController: UIViewController {
   }
   
   func setup(){
-//    navController = UINavigationController()
-//    navController?.pushViewController(self, animated: false)
+    
   }
   
   //var user: User?
@@ -28,9 +27,9 @@ class MBViewController: UIViewController {
   
 
   override func viewDidLoad() {
-      super.viewDidLoad()
-
-      // Do any additional setup after loading the view.
+    super.viewDidLoad()
+    setup()
+    // Do any additional setup after loading the view.
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -46,8 +45,31 @@ class MBViewController: UIViewController {
   
 
   // MARK: - Navigation
+  func setRightBarButton(#iconName: String, paddingToEdge: CGFloat){
+    self.navigationItem.rightBarButtonItems = prepBarButton(iconName: iconName, paddingToEdge: paddingToEdge, selectorName: "rightBarButtonAction:")
+  }
 
+  func setLeftBarButton(#iconName: String, paddingToEdge: CGFloat){
+    self.navigationItem.leftBarButtonItems = prepBarButton(iconName:iconName, paddingToEdge: paddingToEdge, selectorName: "leftBarButtonAction:")
+  }
   
+  func prepBarButton(#iconName: String, paddingToEdge: CGFloat, selectorName: String) -> [UIBarButtonItem]{
+    let frame = CGRectMake(0, 0, 100, 20)
+  
+    var view = UIView(frame: frame)
+    view.backgroundColor = UIColor.greenColor()
+    view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(selectorName)))
+    var imageView = UIImageView(image: UIImage(named: iconName))
+    imageView.frame = view.bounds
+    imageView.contentMode = UIViewContentMode.Center
+    view.addSubview(imageView)
+    
+    var barButton = UIBarButtonItem(customView: view)
+    var spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
+    spacer.width = -17 + paddingToEdge //17 is the default system spacing
+    
+    return [spacer, barButton]
+  }
   
   func addImageToVerticalScrollView(scrollView: UIScrollView, imageName: String){
 //    let theSubviews : [UIView] = scrollView.subviews as [UIView]
